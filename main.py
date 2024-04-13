@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.datasets import load_breast_cancer
+# from sklearn.datasets import load_breast_cancer
 import matplotlib.pyplot as plt
 
 # Load breast cancer dataset
