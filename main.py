@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load breast cancer dataset
-breast_cancer = pd.read_csv('D:\Breaset-Cancer-MCA-Data_Intro-to-Data-Science-main\Breaset-Cancer-Data_Intro-to-Data-Science-main\streamlit-Breastcancer\data\data.csv')
+breast_cancer = pd.read_csv('data.csv')
 X = breast_cancer.data
 y = breast_cancer.target
 feature_names = breast_cancer.feature_names
