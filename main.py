@@ -1,10 +1,16 @@
 import streamlit as st
 import pandas as pd
-# from sklearn.datasets import load_breast_cancer
+from sklearn.datasets import load_breast_cancer
 import matplotlib.pyplot as plt
 
+
+# image_path = r"D:\Breaset-Cancer-MCA-Data_Intro-to-Data-Science-main\Breaset-Cancer-Data_Intro-to-Data-Science-main\Free Vector _ Watercolor breast cancer awareness month background.jpeg"
+#
+# st.image(image_path, caption="Large Image", use_column_width=True)
+
+
 # Load breast cancer dataset
-breast_cancer = pd.read_csv('data.csv')
+breast_cancer = load_breast_cancer()
 X = breast_cancer.data
 y = breast_cancer.target
 feature_names = breast_cancer.feature_names
@@ -12,6 +18,8 @@ feature_names = breast_cancer.feature_names
 # Create DataFrame
 df = pd.DataFrame(X, columns=feature_names)
 df['target'] = y
+st.write("Breast Cancer Database: ")
+st.write(df)
 
 # Streamlit web app
 def main():
@@ -176,6 +184,6 @@ def main():
     # Add a heading above the map
     st.subheader("Breast Cancer Treatment Centers Across India")
     st.map(map_df, use_container_width=True, zoom = map_zoom)
-
+st.balloons()
 if __name__ == "__main__":
     main()
